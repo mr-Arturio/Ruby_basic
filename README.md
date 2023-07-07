@@ -132,3 +132,22 @@ car = MyCar.new
 car.spray_paint("red")  # Output: Your new red paint job looks great!
 MyCar.class_method  # Output: This is a class method.
 ```
+
+### The **initialize** method
+* The ```initialize``` method is a special method in Ruby that is automatically called when a new object is created from a class.
+* It is used to initialize the object's attributes or perform any necessary setup.
+* The ```initialize``` method is typically used to set up an object's initial state or to perform any necessary setup before using the object.
+* Note that the ```initialize``` method is not required in a class. If it is not defined, objects can still be created from the class using ```new```, but no specific initialization will take place unless you define your own initialization method.
+
+```Ruby
+class Person
+  attr_accessor :name, :age
+
+  def initialize(name, age) # called be Person.new with the arguments "John" and 25
+    @name = name
+    @age = age
+  end
+end
+
+person = Person.new("John", 25)
+```
